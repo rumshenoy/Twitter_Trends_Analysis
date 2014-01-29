@@ -42,7 +42,7 @@ function getTrendData(){
 jQuery.ajaxSetup({async:false});
 trends = new Array();
 
-$.get("demo.php?woeid="+woeid, function(data){
+$.get("php/demo.php?woeid="+woeid, function(data){
 trends = JSON.parse(data);
 
 });
@@ -94,7 +94,7 @@ for(i=0;i<trends.length;i++){
 			var val = this.title;
 			var ldiv = this.rel;
 			ldiv = ldiv.replace('#','');
-			$.get("getTweets.php?value="+val, function(data){
+			$.get("php/getTweets.php?value="+val, function(data){
 	ltweets = JSON.parse(data);
 	var k =0;
 	int=window.clearInterval(int)
@@ -144,7 +144,7 @@ function drawChart() {
         };
 
 	var jsonData = $.ajax({
-        url: "graph.php?woeid="+woeid,
+        url: "php/graph.php?woeid="+woeid,
         dataType:"json",
         async: false,
 	method:"POST"

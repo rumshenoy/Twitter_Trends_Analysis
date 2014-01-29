@@ -110,7 +110,7 @@ function createJson(trends,lat,lon){
 
   	google.maps.event.addListener(marker, 'click', function() {
      	val = marker.get("value");
-		$.get("getTweets.php",{value:val}, function(data){
+		$.get("php/getTweets.php",{value:val}, function(data){
 	tweets = JSON.parse(data);
 	});
 	//alert(tweets);
@@ -154,7 +154,7 @@ function initialize() {
 
 	jQuery.ajaxSetup({async:false});
  	trends = new Array();
-	 $.get("demo.php",{woeid:locations[i][2]}, function(data){
+	 $.get("php/demo.php",{woeid:locations[i][2]}, function(data){
 	trendfreq = JSON.parse(data);
 
 

@@ -20,7 +20,7 @@ container.innerHTML = content;
 jQuery.ajaxSetup({async:false});
 trends = new Array();
 
-$.get("demo.php",{woeid:12586798}, function(data){
+$.get("php/demo.php",{woeid:12586798}, function(data){
 trends = JSON.parse(data);
 });
 
@@ -39,7 +39,7 @@ for(i=0;i<trends.length;i++){
 	a.href = "#";
 	a.onclick = function() { return function() {
 	var k =0;
-	$.get("getTweets.php",{value:a.title}, function(data){
+	$.get("php/getTweets.php",{value:a.title}, function(data){
 	tweets = JSON.parse(data);
 	});
 	int=window.clearInterval(int)
@@ -63,10 +63,8 @@ google.load("visualization", "1", {packages:["corechart"]});
 	jQuery.ajaxSetup({async:false});
 
 	trendarray = new Array();
-	 $.get("graph.php",{woeid:12586798}, function(data){
+	 $.get("php/graph.php",{woeid:12586798}, function(data){
 	trendarray = JSON.parse(data);
-
-
 
 })
 
