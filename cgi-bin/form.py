@@ -146,7 +146,7 @@ print """
 	}
     -->
    </style>
-<form name = "inputform" action="cgi-bin/connect.py" method="post">
+<form name = "inputform" action="connect.py" method="post">
 
 
 <div class="field">

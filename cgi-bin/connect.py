@@ -33,11 +33,11 @@ else:
    freq = "Not Entered"
 
 if ask_flag:
-   os.system("python py/selectRandSent.py "+customTrend+" "+freq+" /home/ramya/Anasuya/"+filename)
-   os.system("python py/nltk_find_trends.py /home/ramya/Anasuya/tune.txt"+" "+location)
+   os.system("python py/selectRandSent.py "+customTrend+" "+freq+" "+filename)
+   os.system("python py/nltk_find_trends.py txt/tune.txt"+" "+location)
 
 else:
-  os.system("python py/nltk_find_trends.py /home/ramya/Anasuya/"+filename+" "+location)
+  os.system("python py/nltk_find_trends.py "+filename+" "+location)
 
 
 print "Content-type:text/html\r\n\r\n"
