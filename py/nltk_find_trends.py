@@ -19,11 +19,11 @@ if filename == None :
     print "Invalid woeid "
     exit()
 
-#f = open('/home/ramya/Anasuya/tune.txt','r')
+#f = open('tune.txt','r')
 f = open(filename,'r')
 data = f.read()
 
-trendfile = open('/home/ramya/Anasuya/trend.txt',mode='w+')
+trendfile = open('trend.txt',mode='w+')
 
 s=set(stopwords.words('english'))
 

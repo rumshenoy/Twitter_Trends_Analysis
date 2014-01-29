@@ -24,7 +24,7 @@ while(lines >= 1):
     #print sentence
     lines = lines-1
 
-f = open('/home/ramya/Anasuya/tune.txt','w')
+f = open('tune.txt','w')
 for sentence in newSentences:
     f.write(sentence)
     
