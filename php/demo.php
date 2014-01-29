@@ -6,7 +6,7 @@ if (!$con)
   }
 $woeid = $_GET['woeid'];
 mysql_select_db("nltk_trends", $con);
-$result = mysql_query("SELECT * FROM topwords WHERE woeid = $woeid ORDER BY frequency DESC LIMIT 10");
+$result = mysql_query("SELECT * FROM topwords WHERE woeid = $woeid ORDER BY frequency");
 $trend = array();
 $freq = array();
 $myarray = array();
