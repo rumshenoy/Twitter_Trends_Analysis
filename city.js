@@ -86,10 +86,6 @@ for(i=0;i<trends.length;i++){
 
 	 }; }(i);*/
 
-
-
-
-
 }
 	$('#tabcontent').empty().append(newlink);
 	$(document).ready(function(){
