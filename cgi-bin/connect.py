@@ -41,7 +41,7 @@ else:
 
 
 print "Content-type:text/html\r\n\r\n"
-print """<meta http-equiv="refresh" content="2;url=country.html">"""
+print """<meta http-equiv="refresh" content="2;url=/country.html">"""
 
 
 print "<html>"
