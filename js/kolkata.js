@@ -57,21 +57,15 @@ google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
 	var trends;
 	var freq;
-
-
-
 	jQuery.ajaxSetup({async:false});
 
 	trendarray = new Array();
 	 $.get("php/graph.php",{woeid:12586798}, function(data){
 	trendarray = JSON.parse(data);
 
-})
-
+});
 
 function drawChart() {
-
-
         var data = google.visualization.arrayToDataTable(trendarray);
 
         var options = {
@@ -85,4 +79,4 @@ function drawChart() {
         var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
         chart.draw(data, options);
 
-}
+};

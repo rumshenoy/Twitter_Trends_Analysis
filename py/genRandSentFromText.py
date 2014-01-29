@@ -4,13 +4,13 @@ import sys
 import nltk
 
 def generateRandom(filename):
-    #file_ = open("/home/ramya/Desktop/jeeves.txt")
+    #file_ = open("jeeves.txt")
     #file_ = codecs.open("firefox.txt", "r", "utf-8")
     file_ = open(filename)
     #markov = markovgenpy.Markov(file_)
     #sentence = markov.generate_markov_text()
     #file_ = codecs.open(filename,'rb','utf-8')
-    #file_ = open("/home/ramya/Anasuya/firefox.txt")
+    #file_ = open("firefox.txt")
     markov = markovgenpy.Markov(file_)
     sentence = markov.generate_markov_text()
     return sentence
@@ -32,8 +32,8 @@ if(filename == None):
     print "Invalid filename"
 
 
-f = codecs.open("/home/ramya/Anasuya/tweets.txt",'wb','utf-8-sig')
-#f = open("/home/ramya/Anasuya/tweets.txt")
+f = codecs.open("tweets.txt",'wb','utf-8-sig')
+#f = open("tweets.txt")
 while(n>0):
     sentence = generateRandom(filename) 
     print sentence
